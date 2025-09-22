@@ -581,3 +581,9 @@ footer {
     }
 }
 
+
+
+.text-orange {
+    color: var(--laranja);
+}
+
