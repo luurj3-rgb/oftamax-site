@@ -1,0 +1,583 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cores principais */
+:root {
+    --laranja: #FF6600;
+    --azul: #004AAD;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+    --cinza-escuro: #333333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--laranja) 0%, var(--azul) 100%);
+    color: white;
+    padding: 80px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: white;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Problema */
+.problema-section {
+    padding: 80px 0;
+    background-color: var(--cinza-claro);
+}
+
+.problema-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.problema-text h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.problema-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cinza-escuro);
+}
+
+.problema-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção Solução */
+.solucao-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.solucao-section h2 {
+    font-size: 2.8rem;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.solucao-intro {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--cinza-escuro);
+}
+
+.componentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.componente {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--cinza-claro);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.componente:hover {
+    transform: translateY(-5px);
+}
+
+.componente i {
+    font-size: 1.5rem;
+    color: var(--laranja);
+}
+
+.componente span {
+    font-weight: 500;
+    color: var(--cinza-escuro);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.beneficio {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--cinza-claro);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio i {
+    font-size: 3rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.beneficio h3 {
+    font-size: 1.3rem;
+    color: var(--azul);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.beneficio p {
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+}
+
+/* Seção Provas Sociais */
+.provas-section {
+    padding: 80px 0;
+    background-color: var(--cinza-claro);
+}
+
+.provas-section h2 {
+    font-size: 2.8rem;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.depoimento {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.depoimento-foto img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.depoimento-content p {
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+}
+
+.depoimento-content h4 {
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+
+.estrelas {
+    color: var(--laranja);
+    font-size: 1.2rem;
+}
+
+.selo-anvisa {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.selo-anvisa img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.selo-anvisa p {
+    font-weight: 600;
+    color: var(--azul);
+}
+
+/* Seção Planos */
+.planos-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.planos-section h2 {
+    font-size: 2.8rem;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.plano {
+    background-color: white;
+    border: 2px solid var(--azul);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.plano:hover {
+    transform: translateY(-10px);
+}
+
+.plano-destaque {
+    border-color: var(--laranja);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.2);
+}
+
+.badge-mais-vendido {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--laranja);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.plano-header h3 {
+    font-size: 1.8rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.plano-preco {
+    margin-bottom: 30px;
+}
+
+.preco-parcelado {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--laranja);
+    margin-bottom: 5px;
+}
+
+.preco-vista {
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+}
+
+.plano-content ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.plano-content li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plano-content li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--laranja);
+    font-weight: bold;
+}
+
+.plano-button {
+    display: block;
+    background-color: var(--laranja);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.plano-button:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+}
+
+/* Seção Garantia */
+.garantia-section {
+    padding: 80px 0;
+    background-color: var(--cinza-claro);
+}
+
+.garantia-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.garantia-selo img {
+    width: 150px;
+    height: auto;
+}
+
+.garantia-text h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.garantia-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cinza-escuro);
+    margin-bottom: 15px;
+}
+
+/* Seção FAQ */
+.faq-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.faq-section h2 {
+    font-size: 2.8rem;
+    color: var(--azul);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: var(--cinza-claro);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid var(--laranja);
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    color: var(--azul);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.faq-item p {
+    line-height: 1.6;
+    color: var(--cinza-escuro);
+}
+
+/* CTA Final */
+.cta-final-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--azul) 0%, var(--laranja) 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-final-section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cta-final-section p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+}
+
+.cta-button-final {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: white;
+    padding: 20px 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button-final:hover {
+    background-color: #e55a00;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cinza-escuro);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .problema-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .garantia-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .planos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .plano-destaque {
+        transform: none;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .depoimento {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .componentes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
