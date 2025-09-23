@@ -29,7 +29,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--laranja) 0%, var(--azul) 100%);
+    background: url("assets/images/oftamax_background.png") no-repeat center center/cover;
     color: white;
     padding: 80px 0;
     min-height: 100vh;
