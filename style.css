@@ -93,39 +93,6 @@ body {
     max-height: 400px; /* Limita a altura para não ficar muito grande */
 }
 
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 40px 0;
-        text-align: center;
-    }
-
-    .hero-section .container {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-
-    .cta-button {
-        padding: 15px 30px;
-        font-size: 1rem;
-    }
-
-    .hero-image {
-        order: -1; /* Move a imagem para cima em telas menores */
-        margin-bottom: 30px;
-    }
-}
-
 /* Seção Problema */
 .problema-section {
     padding: 80px 0;
@@ -498,5 +465,142 @@ body {
     font-size: 1.3rem;
     color: var(--azul);
     margin-bottom: 15px;
+}
 
 
+/*
+=====================================================
+    CÓDIGOS DE CORREÇÃO E ADICIONAIS
+=====================================================
+*/
+
+/* --- 1. AJUSTES DE RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 768px) {
+    /* Ajuste geral de títulos para mobile */
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        order: -1; /* Move a imagem para cima em telas menores */
+        margin-bottom: 30px;
+    }
+
+    /* Seção Problema - CORREÇÃO DE LAYOUT */
+    .problema-content {
+        grid-template-columns: 1fr; /* Muda para uma coluna única */
+        text-align: center;
+    }
+
+    .problema-text {
+        text-align: left; /* Mantém parágrafo alinhado à esquerda */
+    }
+
+    .problema-image {
+        margin-top: 30px; /* Adiciona espaço acima da imagem */
+    }
+
+    .problema-image img {
+        max-width: 320px; /* Define um tamanho máximo para a imagem */
+        margin: 0 auto; /* Centraliza a imagem */
+    }
+
+    /* Outras seções */
+    .garantia-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimento {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* --- 2. CÓDIGO ADICIONADO PARA O RODAPÉ --- */
+
+/* Seção CTA Final (Call to Action) */
+#cta-final-section {
+    padding: 80px 20px;
+    background-color: var(--branco); /* Fundo branco */
+    text-align: center;
+}
+
+#cta-final-section h2 {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+#cta-final-section p {
+    font-size: 1.1rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 40px;
+}
+
+.cta-button-final {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+}
+
+.cta-button-final:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--cinza-claro); /* Fundo cinza claro para destacar */
+    color: var(--cinza-escuro);
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #e0e0e0; /* Linha sutil de separação */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
