@@ -679,21 +679,43 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    /* Adiciona flex-grow para que a imagem ocupe o espaço disponível */
+    flex-grow: 1;
 }
 
 .hero-image img {
-    display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 0; /* Remove border-radius se houver */
-    box-shadow: none; /* Remove box-shadow se houver */
+    display: block;
     object-fit: contain;
     max-height: 400px; /* Limita a altura para não ficar muito grande */
+}
+
+@media (max-width: 768px) {
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1; /* Move a imagem para cima em telas menores */
+        margin-bottom: 30px;
+    }
 }
 
 
