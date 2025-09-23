@@ -677,3 +677,23 @@ body {
 }
 
 
+
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0; /* Remove border-radius se houver */
+    box-shadow: none; /* Remove box-shadow se houver */
+    object-fit: contain;
+    max-height: 400px; /* Limita a altura para não ficar muito grande */
+}
+
+
