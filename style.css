@@ -609,3 +609,51 @@ footer p {
 .destaque-oftamax {
   color: var(--laranja);
 }
+
+
+
+/*
+=====================================================
+    Controle de Exibição da Imagem (Desktop vs Mobile)
+=====================================================
+*/
+
+/* 1. CONFIGURAÇÃO PADRÃO (DESKTOP) */
+/* Por padrão, a imagem de desktop é visível e a de mobile, escondida. */
+
+.hero-image-desktop {
+    display: flex; /* Garante que a imagem do desktop apareça */
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-mobile {
+    display: none; /* ESCONDE a imagem do mobile no desktop */
+}
+
+
+/* 2. CONFIGURAÇÃO PARA MOBILE (Telas com até 768px) */
+/* Aqui, invertemos a lógica. */
+
+@media (max-width: 768px) {
+    .hero-image-desktop {
+        display: none; /* ESCONDE a imagem do desktop no mobile */
+    }
+
+    .hero-image-mobile {
+        display: block; /* MOSTRA a imagem do mobile */
+        width: 100%;
+        max-width: 320px; /* Tamanho da imagem no mobile */
+        margin: 30px auto; /* Espaçamento vertical e centralização */
+    }
+
+    .hero-image-mobile img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste para garantir que o container da hero section se adapte */
+    .hero-section .container {
+        grid-template-columns: 1fr; /* Garante que no mobile só tenha uma coluna */
+    }
+}
