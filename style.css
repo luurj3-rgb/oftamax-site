@@ -668,15 +668,39 @@ footer p {
 =====================================================
 */
 
+/*
+=====================================================
+    ESTILO ORGANIZADO PARA IMAGENS DOS PLANOS
+=====================================================
+*/
+
+/* 1. REGRA GERAL PARA O CONTAINER DA IMAGEM */
+/* Aplica-se a TODOS os planos */
 .plano-imagem {
-    text-align: center;
-    padding: 25px 0;
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    padding: 25px 0;    /* Cria um espaçamento vertical de 25px em cima e embaixo */
 }
 
+/* 2. REGRA GERAL PARA A IMAGEM EM SI */
+/* Define um tamanho PADRÃO para a imagem (para o Plano Inicial) */
 .plano-imagem img {
-    max-width: 75px;
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
+    max-width: 80px; /* << TAMANHO DO PLANO INICIAL (frasco pequeno) */
+}
+
+
+/* 3. REGRA ESPECÍFICA para o PLANO INTERMEDIÁRIO */
+/* Esta regra SOBRESCREVE a regra geral apenas para o plano intermediário */
+.plano-intermediario .plano-imagem img {
+    max-width: 320px; /* << TAMANHO DO PLANO INTERMEDIÁRIO (imagem maior) */
+}
+
+
+/* 4. REGRA ESPECÍFICA para o PLANO COMPLETO (que tem a classe 'plano-destaque') */
+/* Esta regra SOBRESCREVE a regra geral apenas para o plano em destaque */
+.plano-destaque .plano-imagem img {
+    max-width: 380px; /* << TAMANHO DO PLANO COMPLETO (imagem ainda maior) */
 }
