@@ -77,10 +77,12 @@ body {
 }
 
 .hero-image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 0; /* Remove border-radius se houver */
+    box-shadow: none; /* Remove box-shadow se houver */
+    object-fit: contain;
+    max-height: 400px; /* Limita a altura para não ficar muito grande */
 }
 
 /* Seção Problema */
@@ -637,26 +639,8 @@ footer {
 }
 
 .produto-item p {
-    color: var(--cinza-escuro);
-    line-height: 1.6;
+    color: var(--cinza-es
+.cta-button-final:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
 }
-
-
-
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0; /* Remove border-radius se houver */
-    box-shadow: none; /* Remove box-shadow se houver */
-    object-fit: contain;
-    max-height: 400px; /* Limita a altura para não ficar muito grande */
-}
-
-
