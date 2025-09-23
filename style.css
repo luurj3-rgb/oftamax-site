@@ -657,3 +657,26 @@ footer p {
         grid-template-columns: 1fr; /* Garante que no mobile só tenha uma coluna */
     }
 }
+
+
+/* ... todo o seu código CSS existente ... */
+/* ... outras regras de estilo ... */
+
+
+/* =====================================================
+    COLE O NOVO CÓDIGO AQUI NO FINAL
+=====================================================
+*/
+
+.plano-imagem {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.plano-imagem img {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
