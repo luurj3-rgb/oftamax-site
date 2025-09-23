@@ -30,6 +30,7 @@ body {
 /* Hero Section */
 .hero-section {
     background: url("assets/images/oftamax_background.png") no-repeat center center/cover;
+    background-color: transparent; /* Garante que o gradiente não sobreponha a imagem */
     color: white;
     padding: 80px 0;
     min-height: 100vh;
