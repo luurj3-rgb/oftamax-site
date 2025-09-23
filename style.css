@@ -674,8 +674,8 @@ footer p {
 }
 
 .plano-imagem img {
-    max-width: 10px;
-    width: 80%;
+    max-width: 40px;
+    width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
